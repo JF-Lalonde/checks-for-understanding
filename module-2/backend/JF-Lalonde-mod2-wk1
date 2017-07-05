@@ -1,0 +1,84 @@
+## Week One - Module 2 Recap
+
+Fork this respository. Answer the questions to the best of your ability. Try to answer them with limited amount of external research. These questions cover the majority of what we've learned this week (which is a TON!). 
+
+Note: When you're done, submit a PR. 
+
+1. List the five common HTTP verbs and what the purpose is of each verb.
+* "Post" -- Create
+* "Get" -- Read
+* "Put" -- Update (replaces entire entry)
+* "Patch" -- Update (modifies only a subset of info)
+* "Delete" -- Delete
+
+2. What is Sinatra?
+* Sinatra is a lightweight web framework DSL (domain-specific language) over a rack layer.
+
+3. What is MVC?
+* MVC (Model-View-Controller) is a backend framework for handling information from a user to a server. The controller handles routing user requests, the model manipulates a database, and the views display webpage information. The idea of this model is to create a modular framework that makes code easy to update while adhering to SRP.
+
+4. Why do we follow conventions when creating our actions/path names in our Sinatra routes?
+* We follow conventions so that the right verbs are used in the right ways to ensure that HTTP requests are handled properly.
+
+5. What types of variables are accessible in our view templates without explicitly passing them?
+* Any variable taken from forms, URLs, or dynamic parameters.
+
+6. Given the following block of code, how would I pass an instance variable `count` with a value of `1` to my `index.erb` template?
+  
+  ```ruby
+  get '/horses' do
+    erb :index
+  end
+  ```
+* Inside the `get` block, `@count = 1`
+
+7. In the same code block, how would I pass a local variable `name` with a value of `Mr. Ed` to the view?
+* Inside the `get` block, `name = Mr. Ed`
+
+8. What's the purpose of ERB?
+* ERB allows views to display the output of Ruby code, so you can run code in your views.
+
+9. Why do I need a development AND test database?
+* Development DB is used after bugs have been worked out in the test DB, this way any errors that occur in the test DB are isolated and fixed and our development DB isn't constantly being broken and rebuilt.
+
+10. What's responsive design?
+* It's a way to build a web app so that it looks good on various screen sizes.
+
+11. What is CRUD and why is it important?
+* CRUD is a way to handle data so that it can be created, read, updated, and deleted.
+
+12. What does HTTP stand for? 
+* HyperText Transfer Protocol
+
+13. What are the two ways to interpolate Ruby in an ERB view template? What's the difference between these two ways?
+* You could have a string inside HTML tags with `<%= "foo #{@bar}" %>` or `"foo <%= @bar %>"` The first way uses more traditional Ruby string interpolation, whereas the second has text surrounding a ruby tag that will evaluate the result into the string.
+
+14. What's an ORM?
+* ORM, or object-relational mappper, will navigate a database using an object-oriented language.
+
+15. What's the most commonly used ORM in ruby (Sinatra & Rails)?
+* ActiveRecord
+
+16. Let's say we have an application with restaurants. There are seven verb + path combinations necessary to provide full CRUD functionality for our restaurant application. List each of the seven combinations, and explain what each is for.
+* `Get` + `/restaurants` will "Read" all restaurants.
+* `Get` + `/restaurants/:id` will "Read" one restaurant.
+* `Get` + `/restaurants/new` will present a form to "Create" a restaurant.
+* `Post` + `/restaurants` will "Create" a new restaurant and redirect to all restaurants.
+* `Get` + `/restaurants/:id/edit` will present a form to "Edit" a restaurant.
+* `Put` + `/restaurants/:id` will "Edit" a restaurant and redirect to that one restaurant's page.
+* `Delete` + `/restaurants/:id` will "Delete" a restaurant and redirect to all restaurants.
+
+17. What's a migration? 
+* A migration is a kind of blueprint for the creation of elements within a database, or any modification thereof.
+
+18. When you create a migration, does it automatically modify your database?
+* No, you need to run your migration after creating it to modify your database.
+
+20. How does a model relate to a database?
+* A model can relate to a db using an ORM like ActiveRecord.
+
+21. What's the difference between agile workflow and waterfall method?
+* Agile focuses on getting a product to market as quickly as possible then revising the product in short increments, whereas waterfall takes a longer approach and builds out a more fully developed product, then takes it to market.
+
+22. What is the difference between `#new` and `#create`?
+* `#new` will instantiate an object but will not save it, whereas `#create` will instantiate and save the object to the database.
