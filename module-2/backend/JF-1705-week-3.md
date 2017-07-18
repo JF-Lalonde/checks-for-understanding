@@ -51,11 +51,13 @@ Note: When you're done, submit a PR with a reflection in the comments about how 
 
 11. Create a form using a `form_for` helper to create a new `Horse`.
 
-``` <%= form_for @horse do |f| %>
+``` 
+    <%= form_for @horse do |f| %>
       <%= f.label :breed %>
       <%= f.text_box :breed %>
       <%= f.submit %>
-    <% end %> ```
+    <% end %> 
+    ```
     
 12. Why do we want to validate our models?
 
