@@ -15,10 +15,13 @@ Note: When you're done, submit a PR.
 5. What's the difference between `==` and `===` in JavaScript?
 
  * Triple equals checks to see if the things being compared are exactly the same, including their data type. Double equals will do some type converting if needed when checking for equality.
+ 
 6. What's the difference between asynchronous and synchronous JavaScript? 
   * JS is always synchronous, but using AJAX allows events to be added to a queue and be executed after the JS engine's execution stack is empty, which makes those events happen in an asynchronous order.
+  
 7. How do we setup a route when creating an API with Node and Express?
   * Haven't used Express yet so I'm not sure.
+  
 8. What do we use Knex for?
   * Knex is used to allow for SQL queries
 9. What's `npm` and what do we use it for?
